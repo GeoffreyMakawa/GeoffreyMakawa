@@ -1,6 +1,23 @@
 package com.example.madil.madiluser;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table
 public class MadilUser {
+    @Id
+    @SequenceGenerator(
+            name = "MadilUser_Sequence",
+            sequenceName = "MadilUser_Sequence",
+            allocationSize = 1
+
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "MadilUser_Sequence"
+
+    )
     private  Long id;
     private  String fullName;
     private String gender;
