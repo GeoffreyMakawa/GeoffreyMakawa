@@ -3,7 +3,9 @@ package com.example.madil.madiluser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -40,5 +42,30 @@ public class MadilUserService {
 
        }
         madilUserRepository.deleteById(id);
+    }
+    @Transactional
+    public void updateUser(Long userId, String fullName, String email) {
+        MadilUser madilUser= madilUserRepository.findById(userId).orElseThrow(
+                () -> new IllegalStateException(
+                        "No user with id "+ userId
+                )
+        );
+        if (fullName != null && fullName.length() >0  &&
+                !Objects.equals(madilUser.getPhoneNumber(), fullName)){
+            madilUser.setFullName(fullName);
+        }
+
+        if (email != null && email.length() >= 0  &&
+                !Objects.equals(madilUser.getEmail(), email)){
+            Optional<MadilUser> findMadilUserByEmail= madilUserRepository.findMadilUserByEmail(email);
+
+            if (findMadilUserByEmail.isPresent()){
+                throw  new IllegalStateException(
+                        "email alread taken"
+                );
+
+            }
+            madilUser.setEmail(email);
+        }
     }
 }

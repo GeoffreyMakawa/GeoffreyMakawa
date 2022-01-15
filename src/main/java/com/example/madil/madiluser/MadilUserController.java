@@ -29,4 +29,13 @@ public class MadilUserController {
     public void DeleteUser(@PathVariable("userId") Long userId){
         madilUserService.deleteUser(userId);
     }
+
+    @PutMapping(path = "{userId}")
+    public  void updateUser(
+            @PathVariable("userId") Long userId,
+            @RequestParam(required = false) String fullName,
+            @RequestParam(required = false) String email ){
+        madilUserService.updateUser(userId,fullName, email);
+    }
+
 }
