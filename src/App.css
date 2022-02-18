@@ -52,9 +52,22 @@
   margin: .5rem .5rem;
   width: 15rem;
 }
-.footer{
-  background: #000;
-  color: #fff;
+.auth{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 60vh;
+  height: 100%;
+}
+.auth From{
+  max-width: 800px;
+  display: contents;
+  align-items: center;
+  width: 100%;
+  
+}
+footer{
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -65,7 +78,7 @@
   align-items: center;
   text-align: center;
 }
-.footer h3{
+footer h3{
   width: 100%;
   font-size: 15px;
   font-weight: 400;

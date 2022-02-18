@@ -14,19 +14,11 @@ export default function navbar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Books</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something Books
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Category
-            </Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="books">Books</Nav.Link>
+            <Nav.Link href="login">Login</Nav.Link>
+            <Nav.Link href="signup">SignUp</Nav.Link>
+           
           </Nav>
           <Form className="d-flex">
             <FormControl

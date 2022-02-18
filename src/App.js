@@ -5,6 +5,7 @@ import Slidebar from './madil/Home/Slidebar'
 import MainContainer from './madil/Home/Main'
 import {BrowserRouter as Router,Route, Switch} from "react-router-dom";
 import Footer from './madil/Footer';
+import Login from './madil/Login';
 
 function App() {
   return (
@@ -12,11 +13,13 @@ function App() {
     <div className="App">
     <NavBar />
       <Switch>
-        <Route exact path="/home" >
+        <Route exact path="/" >
           <Slidebar />
           <MainContainer />
         </Route>
-      
+        <Route exact path="/login" >
+        <Login />
+      </Route>
       </Switch>
       <Footer />
     </div>
