@@ -68,4 +68,8 @@ public class MadilUserService {
             madilUser.setEmail(email);
         }
     }
+
+    public Optional<MadilUser> getOneStudent(String getUserByEmail) {
+        return  madilUserRepository.findMadilUserByEmail(getUserByEmail);
+    }
 }

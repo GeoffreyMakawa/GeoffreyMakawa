@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping(path = "api/book")
 public class BookController {
     private  final BookService bookService;
@@ -13,12 +14,12 @@ public class BookController {
     public BookController(BookService bookService) {
         this.bookService = bookService;
     }
-    @GetMapping
+    @GetMapping(path = "getBooks")
     public List<Book> getBook(){
         return bookService.getBook();
     }
 
-    @PostMapping
+    @PostMapping(path = "addBooks")
     public void addNewBook(@RequestBody Book book){
         bookService.addNewBook(book);
     }

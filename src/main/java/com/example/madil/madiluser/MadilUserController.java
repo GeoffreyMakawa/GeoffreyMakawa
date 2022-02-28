@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
+@CrossOrigin
 @RequestMapping(path =  "api/user")
 public class MadilUserController {
 
@@ -15,12 +17,12 @@ public class MadilUserController {
         this.madilUserService = madilUserService;
     }
 
-    @GetMapping
+    @GetMapping(path = "all_user")
     public List<MadilUser> getMadilUser(){
         return  madilUserService.getMadilUser();
     }
 
-    @PostMapping
+    @PostMapping(path = "addNewUser")
     public  void addNewUser(@RequestBody MadilUser madilUser){
         madilUserService.addUser(madilUser);
     }
@@ -37,5 +39,8 @@ public class MadilUserController {
             @RequestParam(required = false) String email ){
         madilUserService.updateUser(userId,fullName, email);
     }
-
+    @GetMapping(path = "{getUserByEmail}")
+    public Optional<MadilUser> getOMadilUser(@PathVariable("getUserByEmaill") String getUserByEmail){
+        return madilUserService.getOneStudent(getUserByEmail);
+    }
 }
