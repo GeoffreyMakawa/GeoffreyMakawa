@@ -11,3 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.input-text{
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+.input-cont{
+  display: flex;
+  flex-direction: column !important;
+  width: 100%;
+  align-items: center;
+  justify-content: left !important;
+  text-align: left !important;
+}
+.submit-btn{
+  background: green !important;
+}
+
+
+.auth-cont h2{
+  font-size: 40px;
+  color: darkblue;
+  border-radius: 50%;
+  border:  1px solid rgba(0, 0, 255, 0.342);
+  height: 4rem;
+  width: 4rem;
+}
+.auth-cont h3{
+  color: #ccc !important;
+  font-size: 13px;
+}
+.error{
+  color: red !important;
+  margin-bottom: 0rem;
+}
+.success{
+  color: green;
+  font-weight: 600;
+}
+.title{
+  margin: 1rem auto;
+  color: green;
+  font-size: 25px;
+  font-weight: 400;
+}
+.cont{
+  max-width: 1000px;
+  margin: auto;
+  width: 100%;
+}

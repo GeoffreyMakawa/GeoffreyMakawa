@@ -83,3 +83,32 @@ footer h3{
   font-size: 15px;
   font-weight: 400;
 }
+.auth{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 200vh;
+}
+.auth-cont{
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  width: 100%;
+  transition: 0.3s;
+  padding: 10px 10px;
+}
+
+.input-text{
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+.input-cont{
+  display: flex;
+  flex-direction: column !important;
+  width: 100%;
+  align-items: center;
+  justify-content: left !important;
+  text-align: left !important;
+}

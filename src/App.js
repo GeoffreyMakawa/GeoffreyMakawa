@@ -6,6 +6,7 @@ import MainContainer from './madil/Home/Main'
 import {BrowserRouter as Router,Route, Switch} from "react-router-dom";
 import Footer from './madil/Footer';
 import Login from './madil/Login';
+import Signup from './madil/Signup';
 
 function App() {
   return (
@@ -19,7 +20,12 @@ function App() {
         </Route>
         <Route exact path="/login" >
         <Login />
-      </Route>
+        </Route>
+
+
+        <Route exact path="/signup" >
+        <Signup />
+        </Route>
       </Switch>
       <Footer />
     </div>
