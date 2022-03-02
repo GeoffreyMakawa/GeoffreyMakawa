@@ -1,5 +1,6 @@
 package com.example.madil.madiluser;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,8 +40,10 @@ public class MadilUserController {
             @RequestParam(required = false) String email ){
         madilUserService.updateUser(userId,fullName, email);
     }
+
+    @ApiOperation(value = "Getting User by email")
     @GetMapping(path = "{getUserByEmail}")
-    public Optional<MadilUser> getOMadilUser(@PathVariable("getUserByEmaill") String getUserByEmail){
-        return madilUserService.getOneStudent(getUserByEmail);
+    public Optional<MadilUser> MadilUser(@PathVariable("getUserByEmail") String email){
+        return madilUserService.getUserByEmail(email);
     }
 }

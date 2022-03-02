@@ -69,7 +69,7 @@ public class MadilUserService {
         }
     }
 
-    public Optional<MadilUser> getOneStudent(String getUserByEmail) {
-        return  madilUserRepository.findMadilUserByEmail(getUserByEmail);
+    public Optional<MadilUser> getUserByEmail(String email) {
+        return madilUserRepository.findMadilUserByEmail(email);
     }
 }
