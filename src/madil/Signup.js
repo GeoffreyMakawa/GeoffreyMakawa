@@ -30,7 +30,6 @@ useEffect(() => {
     }
 
     ).then(()=>{
-    console.log(formValues);
     })
   }
 }, [formErrors]);
@@ -67,9 +66,7 @@ const validate = (values) => {
   }
   
   return errors;
-  if(Object.keys(formErrors).length === 0 && isSubmit){
-      
-  }
+ 
   
 };
       
@@ -78,7 +75,7 @@ const validate = (values) => {
                     <div className='auth-cont'>
                         <div className='userIcon'>
                         </div>
-                        <p>Register new admin</p>
+                        <p>Register new User</p>
                         {Object.keys(formErrors).length === 0 && isSubmit ? (
                             <div className="success">Signed in successfully <br />
                             <a href="/" className="Register">
@@ -93,7 +90,6 @@ const validate = (values) => {
                             <Form.Group as={Col} md="4" controlId="validationCustomfullName" className='input-cont'>
                                 <Form.Label className="input-text">Enter Email below</Form.Label>
                                 <InputGroup hasValidation>
-                                <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text>
                                 <Form.Control
                                     type="text"
                                     name="email"

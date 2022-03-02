@@ -7,7 +7,7 @@ import {BrowserRouter as Router,Route, Switch} from "react-router-dom";
 import Footer from './madil/Footer';
 import Login from './madil/Login';
 import Signup from './madil/Signup';
-
+import AddBook from './madil/AddBook'
 function App() {
   return (
     <Router >
@@ -21,7 +21,9 @@ function App() {
         <Route exact path="/login" >
         <Login />
         </Route>
-
+        <Route exact path="/dashboard" >
+        <AddBook />
+        </Route>
 
         <Route exact path="/signup" >
         <Signup />
